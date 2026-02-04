@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -32,7 +32,35 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+} */
+
+.song-list {
+  /* border: 2px solid red; */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background: #2c9bc7;
+  gap: 2px;
+  background: linear-gradient(90deg, rgba(44, 155, 199, 1) 0%, rgba(38, 163, 117, 1) 39%, rgba(87, 199, 133, 1) 50%, rgba(163, 171, 51, 1) 91%, rgba(237, 221, 83, 1) 100%);
+}
+
+.song-card {
+  background-color: transparent;
+  color: white;
+  padding: 20px;
+  border:  2px solid yellowgreen;
+  cursor: pointer;
+}
+
+.song-view {
+  background-color: tomato;
+  margin-top: 2rem;
+  color: rgb(40, 22, 22);
+  padding: 20px;
+  border: 1px solid gray;
+  
 }
