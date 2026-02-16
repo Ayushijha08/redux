@@ -47,6 +47,10 @@ function App() {
   useEffect(() => {
     fetchProduct()
   }, [])
+// Redux Toolkit(RTK) is the most updated and recommended way to apply redux logic in an application. 
+// it removes the boilerplate code and makes it easier to implement and write redux flow in a cleaner way.
+
+// in order to implement redux toolkit in your application, u need to install redux toolkit package first -> npm i @reduxjs/toolkit
 
   // return (
   //   <div className="App">
