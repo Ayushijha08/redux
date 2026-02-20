@@ -7,6 +7,7 @@ import { fetchProduct, fetchProductFailure, fetchProductRequest, fetchProductSuc
 import { useSelector } from 'react-redux';
 import { useDispatch } from "react-redux"
 import axios from 'axios';
+import { addBy, addBy10, increment } from './slices/counterSlice';
 
 
 
@@ -24,8 +25,11 @@ function App() {
 
   // console.log('clicked song', clickedSong);
 
-  const { loading, data, error } = useSelector((state) => state.data)
-  console.log("jhdff", loading, data, error);
+  // const { loading, data, error } = useSelector((state) => state.data)
+  const { counter } = useSelector((state) => state.counter)
+  console.log("counter",counter);
+  
+  // console.log("jhdff", loading, data, error);
 
   const dispatch = useDispatch();
 
@@ -58,6 +62,15 @@ function App() {
   //     <SongView song={clickedSong} />
   //   </div>
   // );
+  return(
+    <div>
+     <button onClick={() => dispatch(increment())}>click</button>
+          <button onClick={() => dispatch(addBy(30))}>addby</button>
+     <button onClick={() => dispatch(addBy10())}>by10</button>
+
+    <h1>{counter}</h1>
+    </div>
+  )
 }
 
 export default App;
