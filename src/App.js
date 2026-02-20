@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from "react-redux"
 import axios from 'axios';
 import { addBy, addBy10, increment } from './slices/counterSlice';
+import Rtk from './component-redux/Rtk';
 
 
 
@@ -49,7 +50,7 @@ function App() {
 
 
   useEffect(() => {
-    fetchProduct()
+    // fetchProduct()
   }, [])
 // Redux Toolkit(RTK) is the most updated and recommended way to apply redux logic in an application. 
 // it removes the boilerplate code and makes it easier to implement and write redux flow in a cleaner way.
@@ -69,6 +70,7 @@ function App() {
      <button onClick={() => dispatch(addBy10())}>by10</button>
 
     <h1>{counter}</h1>
+    <Rtk />
     </div>
   )
 }
