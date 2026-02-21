@@ -23,7 +23,7 @@ export const fetchProductFailure = (error) => {
 }
 
 
-export const fetchProduct = () => {
+export const fetchProduct = () => {  // here's the action creator which is returning a fucntion instead of action object
     return function (dispatch) {
         dispatch(fetchProductRequest())
         axios.get('https://fakestoreapi.com/products')
@@ -37,3 +37,9 @@ export const fetchProduct = () => {
             });
     }
 }
+
+
+// ultimate goal: 
+// call an api
+// take the response and send it in the redux store
+// so that my application can access that redux store's data
