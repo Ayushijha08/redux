@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
-import { store } from './slices';
+import { Provider } from 'react-redux';  // it is gettinbg used to communicate between react application and the redux store
+// import { store } from './slices';
+import App2 from './App2';
+import {store} from './RTK2/store'
 // import store from './store';
 
 
@@ -12,7 +14,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      {/* <App /> */}
+      <App2 />
     </Provider>
 
   </React.StrictMode>
