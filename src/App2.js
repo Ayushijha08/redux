@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { increment } from './RTK2/slices/counterSlice';
+import { addBy, addBy10, decrement, increment } from './RTK2/slices/counterSlice';
 
 const App2 = () => {
     // Zustand -> Latest state management tool out there
@@ -29,11 +29,17 @@ const App2 = () => {
     // in order to trigger an action we need dispatch. and dispatch comes from useDispatch hook, it returns dispatch.
     // it also comes from react-redux
 
+
+    // SAAS -> Software as a Service
+
     const dispatch = useDispatch()
   return (
     <div>
         Counter: {counter}
         <button onClick={() => dispatch(increment())}>Increment</button>
+        <button onClick={() => dispatch(decrement())}>Decrement</button>
+        <button onClick={() => dispatch(addBy10())}>Add By 10</button>
+        <button onClick={() => dispatch(addBy(20))}>Add By</button>
     </div>
   )
 }
