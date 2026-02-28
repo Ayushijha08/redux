@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addBy, addBy10, decrement, increment } from './RTK2/slices/counterSlice';
+import { fetchUsers } from './RTK2/actions/userAction';
 
 const App2 = () => {
     // Zustand -> Latest state management tool out there
@@ -33,6 +34,19 @@ const App2 = () => {
     // SAAS -> Software as a Service
 
     const dispatch = useDispatch()
+
+    const {loading, data, error} = useSelector((state) => state.user)
+
+    console.log('loading state', loading);
+    console.log('data', data);
+    console.log('error', error);
+
+
+    useEffect(() => {
+      dispatch(fetchUsers())
+    } ,[])
+
+
   return (
     <div>
         Counter: {counter}
@@ -40,6 +54,12 @@ const App2 = () => {
         <button onClick={() => dispatch(decrement())}>Decrement</button>
         <button onClick={() => dispatch(addBy10())}>Add By 10</button>
         <button onClick={() => dispatch(addBy(20))}>Add By</button>
+        {loading ? <h1>Loading...</h1> : data.length > 0 && data.map((user) => (
+          <div>
+            <h1>Name: {user.name}</h1>
+            <h1>Email: {user.email}</h1>
+          </div>
+        ))}
     </div>
   )
 }

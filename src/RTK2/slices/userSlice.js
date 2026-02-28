@@ -18,5 +18,12 @@ const userSlice = createSlice({
             state.data = action.payload
             state.error = ""
         })
+        builder.addCase(fetchUsers.rejected, (state, action) => {
+            state.loading = false;
+            state.data = [];
+            state.error = action.payload
+        })
     }
 })
+
+export default userSlice.reducer;

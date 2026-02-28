@@ -3,11 +3,13 @@
 
 import { configureStore } from "@reduxjs/toolkit";
 import counterSlice from "./slices/counterSlice";
+import userSlice from "./slices/userSlice";
 
 export const store = configureStore({
     reducer: {
-        counter: counterSlice  // this is counterSlice ka reducer,
+        counter: counterSlice,  // this is counterSlice ka reducer,
     // we can add more reducers if we want
+        user: userSlice
 }
 })
 
