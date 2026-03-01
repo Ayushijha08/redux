@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';  // it is gettinbg used to communicate b
 // import { store } from './slices';
 import App2 from './App2';
 import {store} from './RTK2/store'
+import App3 from './App3';
 // import store from './store';
 
 
@@ -15,7 +16,8 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       {/* <App /> */}
-      <App2 />
+      {/* <App2 /> */}
+      <App3 />
     </Provider>
 
   </React.StrictMode>
