@@ -6,8 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';  // it is gettinbg used to communicate between react application and the redux store
 // import { store } from './slices';
 import App2 from './App2';
-import {store} from './RTK2/store'
+import { store } from './RTK2/store'
 import App3 from './App3';
+import UserProvider from './contexts/ContextUser';
 // import store from './store';
 
 
@@ -17,7 +18,9 @@ root.render(
     <Provider store={store}>
       {/* <App /> */}
       {/* <App2 /> */}
-      <App3 />
+      <UserProvider>
+        <App3 />
+      </UserProvider>
     </Provider>
 
   </React.StrictMode>
