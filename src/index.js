@@ -9,6 +9,7 @@ import App2 from './App2';
 import { store } from './RTK2/store'
 import App3 from './App3';
 import UserProvider from './contexts/ContextUser';
+import App4 from './App4';
 // import store from './store';
 
 
@@ -18,9 +19,10 @@ root.render(
     <Provider store={store}>
       {/* <App /> */}
       {/* <App2 /> */}
-      <UserProvider>
+      {/* <UserProvider>
         <App3 />
-      </UserProvider>
+      </UserProvider> */}
+      <App4 name="Ayushi" age={20} address="Bihar"/>
     </Provider>
 
   </React.StrictMode>
