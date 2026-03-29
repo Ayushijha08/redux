@@ -9,23 +9,25 @@ import App2 from './App2';
 import { store } from './RTK2/store'
 import App3 from './App3';
 import UserProvider from './contexts/ContextUser';
-import App4 from './App4';
+import App4 from './class-based-comp/App4';
+import App5 from './App5';
 // import store from './store';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Provider store={store}>
       {/* <App /> */}
       {/* <App2 /> */}
       {/* <UserProvider>
         <App3 />
       </UserProvider> */}
-      <App4 name="Ayushi" age={20} address="Bihar"/>
+      {/* <App4 name="Ayushi" age={20} address="Bihar"/> */}
+      <App5 />
     </Provider>
 
-  </React.StrictMode>
+  // </React. 
 );
 
 // If you want to start measuring performance in your app, pass a function
