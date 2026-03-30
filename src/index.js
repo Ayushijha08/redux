@@ -11,6 +11,8 @@ import App3 from './App3';
 import UserProvider from './contexts/ContextUser';
 import App4 from './class-based-comp/App4';
 import App5 from './App5';
+import UseMemo1 from './advanced-hooks/UseMemo1';
+// import UseMemo from './advanced-hooks/UseMemo;
 // import store from './store';
 
 
@@ -24,7 +26,9 @@ root.render(
         <App3 />
       </UserProvider> */}
       {/* <App4 name="Ayushi" age={20} address="Bihar"/> */}
-      <App5 />
+      {/* <App5 /> */}
+      {/* <UseMemo /> */}
+      <UseMemo1 />
     </Provider>
 
   // </React. 
